@@ -8,29 +8,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <script src="{{ asset('js/main.js') }}"></script>
 </head>
 
 <body class="antialiased">
   <div class="layout">
-  <header class="layout_header">
-    {% include '@components/header/header.twig' %}
-  </header>
-  
-  <main class="layout_main">
-    {% block main %}
-      <div class="container">
-        <div class="layout__section layout__section--slider">
-          {% include '@components/slider/slider.twig' with {
-            items: scope.slides,
-          } %}
+    {% include '@components/modalWindow/modal.twig' %}
+    <header class="layout_header">
+      {% include '@components/header/header.twig' %}
+    </header>
+    
+    <main class="layout_main">
+      {% block main %}
+        <div class="container">
         </div>
-      </div>
-    {% endblock %}
-  </main>
-
-    {% include '@components/footer/footer.twig' %}
+        {% endblock %}
+    </main>
+    <footer class="layout_footer">
+      {% include '@components/footer/footer.twig' %}
+    </footer>
   </div>
-
-  <script src="{{ asset('js/app.js') }}"></script>
+  
 </body>
 </html>

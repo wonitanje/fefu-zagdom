@@ -1,35 +1,3 @@
-console.log('123')
-
-const headerMenu = document.querySelector('.menu');
-const headerMenuToggle = document.querySelector('.menu-toggle');
-if (headerMenuToggle) {
-  headerMenuToggle.addEventListener('click', () => {
-    headerMenu.classList.toggle('active');
-    headerMenuToggle.classList.toggle('active');
-  })
-}
-
-/////////////////  MODAL WINDOW  ///////////////////
-
-const submit = document.querySelector('.headcontacts_item-submit')
-const wModal = document.querySelector('.fon')
-const closeBtn = document.querySelector('.modal-window__close-btn')
-if (submit) {
-  submit.addEventListener('click', () => {
-    wModal.style.display = "flex"
-  })
-}
-
-if (closeBtn) {
-  closeBtn.addEventListener('click', () => {
-    wModal.style.display = "none"
-  })
-}
-
-
-
-/////////////////////  SLIDER  /////////////////////
-
 /* Устанавливаем стартовый индекс слайда по умолчанию: */
 console.log(111)
 let slideIndex = 1;
@@ -54,7 +22,7 @@ function currentSlide(n) {
 /* Функция перелистывания: */
 function showSlides(n) {
     /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
-    let slides = document.getElementsByClassName("item");
+    let slides = document.getElementsByClassName('item');
     
     /* Проверяем количество слайдов: */
     if (n > slides.length) {

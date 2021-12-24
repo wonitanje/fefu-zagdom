@@ -1,21 +1,30 @@
-{% macro content(scope) %}
-  {% import _self as macros %}
-
-    <div class="slider swiper" data-swiper>
-
-      <div class="swiper-wrapper">
-
-        {% for item in scope.items %}
-          <div class="swiper-slide">
-            {{ macros.slide(item) }}
-          </div>
-        {% endfor %}
-      </div>
-    
-      <div class="swiper-pagination"></div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+{% import _self as macros %}
+  {% macro content() %}
+  <div class="container">
+      <!-- Основной блок слайдера -->
+    <div class="slider">
+    <div class="slider-text">
+      <h1 class="slider-text__h1">Проектируем<br>
+      и строим<br>загородные дома<br></h1>
+      <p class="slider-text__p">Строим дома «под ключ»: от этапа проектирования<br>и до финишной отделки помещений</div></p>
+    <!-- Первый слайд -->
+    <div class="item">
+      <img src="{{ asset('images/slide-desktop.png') }}">
     </div>
+    <!-- Второй слайд -->
+    <div class="item">
+      <img src="https://tproger.ru/s3/uploads/2020/07/rose.jpg">
+    </div>
+    <!-- Третий слайд -->
+    <div class="item">
+      <img src="https://tproger.ru/s3/uploads/2020/07/leaf.jpg">
+    </div>
+    <!-- Кнопки-стрелочки -->
+    <a class="previous" onclick="previousSlide()">&#10094;</a>
+    <a class="next" onclick="nextSlide()">&#10095;</a>
+    </div>
+  </div>
+
+    <script src="{{ asset('js/header.js') }}"></script>
   {% endmacro %}
-{{ macros.content(scope) }}
+{{ macros.content }}
