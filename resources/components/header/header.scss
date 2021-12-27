@@ -157,6 +157,7 @@ $green: #029f59;
 
     &_item {
         list-style: none;
+        cursor: pointer;
     }
 
     &_link {
@@ -199,7 +200,11 @@ $green: #029f59;
         display: flex;
         justify-content: center;
         grid-gap: 8px;
-        color: #fff;
+        color: #254741;
+    }
+
+    &_telephone-text {
+        cursor: pointer;
     }
 
     &_telephone-img1 {
@@ -215,11 +220,12 @@ $green: #029f59;
     }
 
     &_item-submit {
-        background-color: #029F59;
-        height: 50%;
+        height: 50px;
         width: 204px;
+        background-color: #029F59;
         border-radius: 10px;
         color: white;
+        cursor: pointer;
         font-weight: 500;
         @media screen and (max-width: 687px) {
             display: none;

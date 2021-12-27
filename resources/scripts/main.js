@@ -1,2 +1,4 @@
 import './bootstrap';
-import './swiper';
+import './header';
+import './modaiWindow';
+import './slider';
