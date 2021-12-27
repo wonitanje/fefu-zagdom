@@ -1,2 +1,2 @@
-require('./bootstrap');
-console.log('hello world!')
+import './bootstrap';
+import './swiper';
